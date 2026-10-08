@@ -1,0 +1,191 @@
+{
+  "checked_at": "2026-10-08T08:11:43.540023+00:00",
+  "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "results": [
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": "test_boundary_and_above_are_observations_not_signoff (test_replay.ReplayTests.test_boundary_and_above_are_observations_not_signoff) ... ok\ntest_bundle_trace_and_staleness (test_replay.ReplayTests.test_bundle_trace_and_staleness) ... ok\ntest_changed_model_cannot_reuse_manifest (test_replay.ReplayTests.test_changed_model_cannot_reuse_manifest) ... ok\ntest_cli_draft_is_blocked_and_does_not_emit_artifacts (test_replay.ReplayTests.test_cli_draft_is_blocked_and_does_not_emit_artifacts) ... ok\ntest_cli_rejects_zero_work_and_unknown_commands (test_replay.ReplayTests.test_cli_rejects_zero_work_and_unknown_commands) ... ok\ntest_codegen_changes_when_semantics_change (test_replay.ReplayTests.test_codegen_changes_when_semantics_change) ... ok\ntest_conflicting_duplicates_rejected (test_replay.ReplayTests.test_conflicting_duplicates_rejected) ... ok\ntest_cross_type_id_collision_rejected (test_replay.ReplayTests.test_cross_type_id_collision_rejected) ... ok\ntest_dangling_and_unmapped_requirements_rejected (test_replay.ReplayTests.test_dangling_and_unmapped_requirements_rejected) ... ok\ntest_duplicate_json_keys_and_nan_rejected (test_replay.ReplayTests.test_duplicate_json_keys_and_nan_rejected) ... ok\ntest_empty_stream_and_unit_mismatch_rejected (test_replay.ReplayTests.test_empty_stream_and_unit_mismatch_rejected) ... ok\ntest_epoch_changes_clear_history (test_replay.ReplayTests.test_epoch_changes_clear_history) ... ok\ntest_exact_duplicates_are_idempotent (test_replay.ReplayTests.test_exact_duplicates_are_idempotent) ... ok\ntest_failed_simulation_and_driver_intent_rejected (test_replay.ReplayTests.test_failed_simulation_and_driver_intent_rejected) ... ok\ntest_fixture_cannot_claim_simulation_passed (test_replay.ReplayTests.test_fixture_cannot_claim_simulation_passed) ... ok\ntest_impact_query_is_forward_trace (test_replay.ReplayTests.test_impact_query_is_forward_trace) ... ok\ntest_integers_reject_bool_float_negative_and_overflow (test_replay.ReplayTests.test_integers_reject_bool_float_negative_and_overflow) ... ok\ntest_invalid_observation_suppresses_and_invalidates (test_replay.ReplayTests.test_invalid_observation_suppresses_and_invalidates) ... ok\ntest_latest_start_wins (test_replay.ReplayTests.test_latest_start_wins) ... ok\ntest_no_history_does_not_create_zero_distance (test_replay.ReplayTests.test_no_history_does_not_create_zero_distance) ... ok\ntest_reset_clears_history (test_replay.ReplayTests.test_reset_clears_history) ... ok\ntest_scopes_are_independent (test_replay.ReplayTests.test_scopes_are_independent) ... ok\ntest_source_tampering_rejected (test_replay.ReplayTests.test_source_tampering_rejected) ... ok\ntest_start_equals_end_samples_old_history (test_replay.ReplayTests.test_start_equals_end_samples_old_history) ... ok\ntest_timestamp_and_epoch_regressions_rejected (test_replay.ReplayTests.test_timestamp_and_epoch_regressions_rejected) ... ok\ntest_unreviewed_and_unresolved_rules_block_generation (test_replay.ReplayTests.test_unreviewed_and_unresolved_rules_block_generation) ... ok\ntest_violation_cannot_increase_legal_coverage (test_replay.ReplayTests.test_violation_cannot_increase_legal_coverage) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.504s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "tools/check_generated_sv.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"tool\": \"pyslang\",\n  \"version\": \"12.0.0\",\n  \"checks\": [\n    {\n      \"case\": \"single_rule\",\n      \"diagnostics\": 0,\n      \"errors\": 0,\n      \"messages\": \"\"\n    },\n    {\n      \"case\": \"start_equals_end\",\n      \"diagnostics\": 0,\n      \"errors\": 0,\n      \"messages\": \"\"\n    },\n    {\n      \"case\": \"multiple_rules\",\n      \"diagnostics\": 0,\n      \"errors\": 0,\n      \"messages\": \"\"\n    }\n  ],\n  \"passed\": true,\n  \"simulation_performed\": false,\n  \"python_sv_equivalence_proven\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "doctor",
+        "--config",
+        "configs/environment.json"
+      ],
+      "exit_code": 3,
+      "expected_exit_code": 3,
+      "passed": true,
+      "stdout": "{\n  \"status\": \"blocked\",\n  \"blockers\": [\n    \"simulator_not_configured\",\n    \"workdir_not_configured\",\n    \"monitor_path_not_configured\",\n    \"smoke_argv_not_configured\"\n  ],\n  \"tools_on_this_host\": {\n    \"vcs\": null,\n    \"xrun\": null,\n    \"vsim\": null,\n    \"iverilog\": null,\n    \"verilator\": null,\n    \"slang\": null\n  },\n  \"simulation_executed\": false,\n  \"note\": \"Discovery only; smoke commands are never executed by doctor.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "validate",
+        "--plan",
+        "examples/ddr5_vref/plan.draft.json"
+      ],
+      "exit_code": 3,
+      "expected_exit_code": 3,
+      "passed": true,
+      "stdout": "{\n  \"status\": \"blocked\",\n  \"blockers\": [\n    \"req.ddr5.vrefca: requirement_not_reviewed\",\n    \"req.ddr5.vrefcs: requirement_not_reviewed\",\n    \"rel.ddr5.vrefca: rule_not_reviewed\",\n    \"rel.ddr5.vrefca: unresolved_bound\",\n    \"rel.ddr5.vrefca: event_anchors_unreviewed\",\n    \"rel.ddr5.vrefca: tMRD_config_unresolved\",\n    \"rel.ddr5.vrefca: end_command_scope_not_frozen\",\n    \"rel.ddr5.vrefca: monitor_binding_missing\",\n    \"rel.ddr5.vrefcs: rule_not_reviewed\",\n    \"rel.ddr5.vrefcs: unresolved_bound\",\n    \"rel.ddr5.vrefcs: event_anchors_unreviewed\",\n    \"rel.ddr5.vrefcs: tMRD_config_unresolved\",\n    \"rel.ddr5.vrefcs: end_command_scope_not_frozen\",\n    \"rel.ddr5.vrefcs: monitor_binding_missing\"\n  ],\n  \"semantic_correctness_proven\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "replay",
+        "--plan",
+        "examples/min_interval/plan.json",
+        "--run",
+        "examples/min_interval/baseline.run.json",
+        "--events",
+        "examples/min_interval/baseline.events.jsonl",
+        "--out",
+        "runs/m0-baseline"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"status\": \"needs_integration\",\n  \"summary\": {\n    \"total_bins\": 2,\n    \"replay_observed_bins\": 1,\n    \"replay_observation_ratio\": 0.5,\n    \"verified_hit_bins\": 0,\n    \"verified_coverage\": null,\n    \"unresolved_bins\": 2,\n    \"excluded_bins\": 0,\n    \"replayed_violations\": 0\n  },\n  \"report\": \"D:\\\\0000mydywork\\\\hydwork\\\\time\\\\2026DAC\\\\2026DAC\\\\runs\\\\m0-baseline\\\\report.json\",\n  \"closure_claim\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "replay",
+        "--plan",
+        "examples/min_interval/plan.json",
+        "--run",
+        "examples/min_interval/directed.run.json",
+        "--events",
+        "examples/min_interval/directed.events.jsonl",
+        "--out",
+        "runs/m0-directed"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"status\": \"needs_integration\",\n  \"summary\": {\n    \"total_bins\": 2,\n    \"replay_observed_bins\": 2,\n    \"replay_observation_ratio\": 1.0,\n    \"verified_hit_bins\": 0,\n    \"verified_coverage\": null,\n    \"unresolved_bins\": 2,\n    \"excluded_bins\": 0,\n    \"replayed_violations\": 0\n  },\n  \"report\": \"D:\\\\0000mydywork\\\\hydwork\\\\time\\\\2026DAC\\\\2026DAC\\\\runs\\\\m0-directed\\\\report.json\",\n  \"closure_claim\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "replay",
+        "--plan",
+        "examples/min_interval/plan.json",
+        "--run",
+        "examples/min_interval/negative.run.json",
+        "--events",
+        "examples/min_interval/negative.events.jsonl",
+        "--out",
+        "runs/m0-negative"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"status\": \"needs_integration\",\n  \"summary\": {\n    \"total_bins\": 2,\n    \"replay_observed_bins\": 0,\n    \"replay_observation_ratio\": 0.0,\n    \"verified_hit_bins\": 0,\n    \"verified_coverage\": null,\n    \"unresolved_bins\": 2,\n    \"excluded_bins\": 0,\n    \"replayed_violations\": 1\n  },\n  \"report\": \"D:\\\\0000mydywork\\\\hydwork\\\\time\\\\2026DAC\\\\2026DAC\\\\runs\\\\m0-negative\\\\report.json\",\n  \"closure_claim\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "trace-bin",
+        "--report",
+        "runs/m0-directed/report.json",
+        "--bin",
+        "rel.fixture.interval.at_bound"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"bin\": {\n    \"bin_id\": \"rel.fixture.interval.at_bound\",\n    \"bin_revision\": 1,\n    \"rule_id\": \"rel.fixture.interval\",\n    \"requirement_id\": \"req.fixture.interval\",\n    \"outcome\": \"at_bound\",\n    \"replay_hit_count\": 1,\n    \"verified_hit_count\": 0,\n    \"disposition\": \"unresolved\",\n    \"diagnosis\": \"unknown\"\n  },\n  \"freshness\": \"current\",\n  \"changed_or_missing\": [],\n  \"closure_claim\": false,\n  \"rule\": {\n    \"id\": \"rel.fixture.interval\",\n    \"revision\": 1,\n    \"requirement_id\": \"req.fixture.interval\",\n    \"review_status\": \"reviewed\",\n    \"blockers\": [],\n    \"op\": \"min_interval\",\n    \"start_command\": \"START\",\n    \"end_commands\": [\n      \"END\"\n    ],\n    \"bound_ticks\": 4,\n    \"history_policy\": \"latest_start\",\n    \"start_anchor\": \"observed_START_timestamp\",\n    \"end_anchor\": \"observed_END_timestamp\"\n  },\n  \"requirement\": {\n    \"id\": \"req.fixture.interval\",\n    \"source_ids\": [\n      \"src.fixture\"\n    ],\n    \"text\": \"END follows latest START by at least 4 ns in the same scope and epoch.\",\n    \"review_status\": \"reviewed\"\n  },\n  \"sources\": [\n    {\n      \"id\": \"src.fixture\",\n      \"path\": \"spec.md\",\n      \"sha256\": \"d355b3154c8806f9a019232156fd3cb45912f8d6777d1762c629cb73b6d66e8f\",\n      \"locator\": \"Synthetic min-interval fixture, paragraphs 2-3\"\n    }\n  ],\n  \"code_mapping\": [\n    {\n      \"rule_id\": \"rel.fixture.interval\",\n      \"rule_revision\": 1,\n      \"requirement_id\": \"req.fixture.interval\",\n      \"declaration_start_line\": 11,\n      \"declaration_end_line\": 21,\n      \"covergroup_symbol\": \"cg_0\",\n      \"sampling_start_line\": 54,\n      \"sampling_end_line\": 69\n    }\n  ],\n  \"witnesses\": [\n    {\n      \"sample_id\": \"cb3a9e75875870e1b92883685863b473a60990d97da93a37e10e6f76ba2fb625\",\n      \"rule_id\": \"rel.fixture.interval\",\n      \"rule_revision\": 1,\n      \"requirement_id\": \"req.fixture.interval\",\n      \"scope\": [\n        0,\n        0,\n        0\n      ],\n      \"config_epoch\": 0,\n      \"reset_epoch\": 0,\n      \"start_event_id\": \"e2\",\n      \"end_event_id\": \"e3\",\n      \"guard\": true,\n      \"suppression_reason\": null,\n      \"bound_ticks\": 4,\n      \"time_unit\": \"ns\",\n      \"interval_ticks\": 4,\n      \"outcome\": \"at_bound\",\n      \"bin_id\": \"rel.fixture.interval.at_bound\",\n      \"end_source_locator\": \"authored_fixture:directed:row3\",\n      \"start_source_locator\": \"authored_fixture:directed:row2\"\n    }\n  ],\n  \"related_samples\": [\n    {\n      \"sample_id\": \"d076f455de0edd979409e510a9afd165bdfcc634dc75c131090c378226b80cb0\",\n      \"rule_id\": \"rel.fixture.interval\",\n      \"rule_revision\": 1,\n      \"requirement_id\": \"req.fixture.interval\",\n      \"scope\": [\n        0,\n        0,\n        0\n      ],\n      \"config_epoch\": 0,\n      \"reset_epoch\": 0,\n      \"start_event_id\": \"e0\",\n      \"end_event_id\": \"e1\",\n      \"guard\": true,\n      \"suppression_reason\": null,\n      \"bound_ticks\": 4,\n      \"time_unit\": \"ns\",\n      \"interval_ticks\": 6,\n      \"outcome\": \"above_bound\",\n      \"bin_id\": \"rel.fixture.interval.above_bound\",\n      \"end_source_locator\": \"authored_fixture:directed:row1\",\n      \"start_source_locator\": \"authored_fixture:directed:row0\"\n    },\n    {\n      \"sample_id\": \"cb3a9e75875870e1b92883685863b473a60990d97da93a37e10e6f76ba2fb625\",\n      \"rule_id\": \"rel.fixture.interval\",\n      \"rule_revision\": 1,\n      \"requirement_id\": \"req.fixture.interval\",\n      \"scope\": [\n        0,\n        0,\n        0\n      ],\n      \"config_epoch\": 0,\n      \"reset_epoch\": 0,\n      \"start_event_id\": \"e2\",\n      \"end_event_id\": \"e3\",\n      \"guard\": true,\n      \"suppression_reason\": null,\n      \"bound_ticks\": 4,\n      \"time_unit\": \"ns\",\n      \"interval_ticks\": 4,\n      \"outcome\": \"at_bound\",\n      \"bin_id\": \"rel.fixture.interval.at_bound\",\n      \"end_source_locator\": \"authored_fixture:directed:row3\",\n      \"start_source_locator\": \"authored_fixture:directed:row2\"\n    }\n  ],\n  \"verification_blockers\": [\n    \"native_coverage_not_joined\",\n    \"independent_checker_evidence_missing\",\n    \"model_validation_evidence_missing\",\n    \"required_regression_not_evaluated\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "cc.py",
+        "impact",
+        "--plan",
+        "examples/min_interval/plan.json",
+        "--id",
+        "src.fixture"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"changed_object\": \"src.fixture\",\n  \"rule_ids\": [\n    \"rel.fixture.interval\"\n  ],\n  \"bin_ids\": [\n    \"rel.fixture.interval.at_bound\",\n    \"rel.fixture.interval.above_bound\"\n  ],\n  \"required_actions\": [\n    \"regenerate\",\n    \"replay_affected_traces\",\n    \"revalidate_model\",\n    \"rerun_required_regression\"\n  ],\n  \"precision\": \"rule_dependency_level; regression test selection not yet implemented\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python",
+        "experiments/offline_baseline/harness.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "label": "O1 offline baseline harness: 13/13 cases pass",
+      "stdout": "PASS  01_at_bound\nPASS  02_above_bound\nPASS  03_below_bound_violation\nPASS  04_no_history\nPASS  05_latest_start_wins\nPASS  06_reset_clears_history\nPASS  07_cross_rank_independent\nPASS  08_config_epoch_change\nPASS  09_reset_epoch_change\nPASS  10_invalid_event_clears\nPASS  11_duplicate_idempotent\nPASS  12_self_overlap\nPASS  13_multi_rule_shared\n\n========================================\nTotal: 13  Pass: 13  Fail: 0",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python",
+        "cc.py",
+        "validate",
+        "--plan",
+        "experiments/offline_baseline/plans/single_rule.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "label": "O1 offline plan validates with no blockers",
+      "stdout": "{\n  \"status\": \"ready_for_generation\",\n  \"blockers\": [],\n  \"semantic_correctness_proven\": false\n}",
+      "stderr": ""
+    }
+  ],
+  "all_expected_outcomes": true,
+  "legacy_files_changed": [],
+  "real_ddr5_simulation_performed": false,
+  "dynamic_python_sv_equivalence_proven": false,
+  "o1_offline_baseline_delivered": true,
+  "o1_cases_total": 13,
+  "o1_cases_passed": 13,
+  "o1_expected_results_authored_independently": true,
+  "o2_sampling_semantics_ir_extension": false,
+  "o3_evidence_driven_diagnosis": false,
+  "o4_fix_and_regression": false
+}

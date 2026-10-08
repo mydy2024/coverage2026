@@ -1,0 +1,2 @@
+{"channel":0,"command":"START","config_epoch":0,"event_id":"e0","kind":"command","rank":0,"reset_epoch":0,"run_id":"fixture.baseline","source_locator":"authored_fixture:baseline:row0","subchannel":0,"timestamp_ticks":0,"valid":true}
+{"channel":0,"command":"END","config_epoch":0,"event_id":"e1","kind":"command","rank":0,"reset_epoch":0,"run_id":"fixture.baseline","source_locator":"authored_fixture:baseline:row1","subchannel":0,"timestamp_ticks":6,"valid":true}

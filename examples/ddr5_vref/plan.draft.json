@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "plan_id": "ddr5.vref.draft",
+  "revision": 1,
+  "protocol": "DDR5",
+  "time_unit": "ps",
+  "sources": [
+    {
+      "id": "src.ddr5.vrefca",
+      "path": "../../../JESD79-5D.PDF",
+      "sha256": "6a04ff25e3b0851a36716025ca0983acce0fc0ecc7c9bf7d5d6bc63f410bff27",
+      "locator": "physical page 270; printed page 234; Table 125; timing figure and surrounding text also required"
+    },
+    {
+      "id": "src.ddr5.vrefcs",
+      "path": "../../../JESD79-5D.PDF",
+      "sha256": "6a04ff25e3b0851a36716025ca0983acce0fc0ecc7c9bf7d5d6bc63f410bff27",
+      "locator": "physical page 271; printed page 235; Table 127; timing figure and surrounding text also required"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "req.ddr5.vrefca",
+      "source_ids": [
+        "src.ddr5.vrefca"
+      ],
+      "text": "VrefCA to next valid command delay; numeric tMRD and anchors unresolved.",
+      "review_status": "draft"
+    },
+    {
+      "id": "req.ddr5.vrefcs",
+      "source_ids": [
+        "src.ddr5.vrefcs"
+      ],
+      "text": "VrefCS to next valid command delay; numeric tMRD and anchors unresolved.",
+      "review_status": "draft"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rel.ddr5.vrefca",
+      "revision": 1,
+      "requirement_id": "req.ddr5.vrefca",
+      "review_status": "draft",
+      "blockers": [
+        "event_anchors_unreviewed",
+        "tMRD_config_unresolved",
+        "end_command_scope_not_frozen",
+        "monitor_binding_missing"
+      ],
+      "op": "min_interval",
+      "start_command": "VrefCA",
+      "end_commands": [
+        "NOP"
+      ],
+      "bound_ticks": null,
+      "history_policy": "latest_start",
+      "start_anchor": "pending_timing_figure_review",
+      "end_anchor": "pending_timing_figure_review"
+    },
+    {
+      "id": "rel.ddr5.vrefcs",
+      "revision": 1,
+      "requirement_id": "req.ddr5.vrefcs",
+      "review_status": "draft",
+      "blockers": [
+        "event_anchors_unreviewed",
+        "tMRD_config_unresolved",
+        "end_command_scope_not_frozen",
+        "monitor_binding_missing"
+      ],
+      "op": "min_interval",
+      "start_command": "VrefCS",
+      "end_commands": [
+        "NOP"
+      ],
+      "bound_ticks": null,
+      "history_policy": "latest_start",
+      "start_anchor": "pending_timing_figure_review",
+      "end_anchor": "pending_timing_figure_review"
+    }
+  ]
+}

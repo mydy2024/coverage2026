@@ -1,0 +1,92 @@
+{
+  "kind": "read_only_planning_audit",
+  "date": "2026-10-08",
+  "checks": {
+    "enum_declares_UNKNOWN": false,
+    "generated_uses_UNKNOWN": true,
+    "remove_cs_qualifier_changes_output": false,
+    "resource_directory_exists": false,
+    "external_recall_reference_exists": false
+  },
+  "runner_probes": [
+    {
+      "argv": [
+        "--stage",
+        "verify"
+      ],
+      "returncode": 0,
+      "stdout": "======================================================================\nCoverageClosure Pipeline �� Master Runner\n======================================================================\nRoot: D:\\0000mydywork\\hydwork\\time\\2026DAC\\causal_bayesian_attribution\\pipeline\nKG:   D:\\0000mydywork\\hydwork\\time\\2026DAC\\causal_bayesian_attribution\\kg\n\n[15:37:16] [verify    ] PASSED    MIR swap=True CAI invert=True cs_sampled used=True casez patterns=True ca_history for 2-cycle=True enum complete=True 2-cycle ACT=True\n\n======================================================================\nPipeline: 1/1 stages passed\nAll stages OK\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "--stage",
+        "all"
+      ],
+      "returncode": 0,
+      "stdout": "======================================================================\nCoverageClosure Pipeline �� Master Runner\n======================================================================\nRoot: D:\\0000mydywork\\hydwork\\time\\2026DAC\\causal_bayesian_attribution\\pipeline\nKG:   D:\\0000mydywork\\hydwork\\time\\2026DAC\\causal_bayesian_attribution\\kg\n\n\n======================================================================\nPipeline: 0/0 stages passed\nAll stages OK\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "--stage",
+        "nonexistent"
+      ],
+      "returncode": 0,
+      "stdout": "======================================================================\nCoverageClosure Pipeline �� Master Runner\n======================================================================\nRoot: D:\\0000mydywork\\hydwork\\time\\2026DAC\\causal_bayesian_attribution\\pipeline\nKG:   D:\\0000mydywork\\hydwork\\time\\2026DAC\\causal_bayesian_attribution\\kg\n\n\n======================================================================\nPipeline: 0/0 stages passed\nAll stages OK\n",
+      "stderr": ""
+    }
+  ],
+  "limitations": [
+    "No HDL compile or DUT simulation performed",
+    "Generated SV compared in memory only"
+  ],
+  "source_hashes": {
+    "causal_bayesian_attribution.md": "4e86a1ed0d823c0f8715a39f49ebf4dd9c2d904d22f209d33f6f21ba1fbbbab2",
+    "DESIGN.md": "71216667a6ba9f39ecfc853009c7cad1cfcf1a65b5b11cc197979166b2175b18",
+    "FLOW.md": "b99d0f58967d3e70804cd63a1a91d94b786271866c398d994c183deecf3f298e",
+    "extract\\vrefca_family.md": "909c47841c897b1269db94fccd9273d0be9a00cde2cbedf147e2b465036e9271",
+    "gen\\ddr5_cmd_decoder.sv": "058c1a74346206eb70c26d4a5ef1b566c3f8397e7c5e76027b26f170f6426801",
+    "gen\\ddr5_cmd_decoder_inj_add_bogus_dup_VrefCA.sv": "005f558c0818296f7b7b2d2dc673c1fd10ef214c0ba554599b0479ba236a4192",
+    "gen\\ddr5_cmd_decoder_inj_delete_ACT.sv": "9d8556b2fad6215485798ca70e96184d8ac5757da28e3fbe788f05177d809973",
+    "gen\\ddr5_cmd_decoder_inj_delete_VrefCA.sv": "617c5fe98fbfc0b34b1b43af4c3b7a398858bd2d1159e0440a74bd36e2f9ccf4",
+    "gen\\ddr5_cmd_decoder_inj_delete_VrefCS.sv": "199febf6086a8f273eae2baf48db659a8ddb6c0dc3c9e4009092406099be5261",
+    "gen\\ddr5_cmd_decoder_inj_flip_ACT_CA0.sv": "162fa2bc589e73f6b62af9d777b9e04a9a2f977e01ffee246b1777602e5464b4",
+    "gen\\ddr5_cmd_decoder_inj_flip_PDE_CA4.sv": "cf8f42d120e8bbc6b555857db5b2a722d178d19e187bfc330067eecf1a35db72",
+    "gen\\ddr5_cmd_decoder_inj_flip_VrefCA_CA12.sv": "34e27769d0366990570fefebfc457b585cbc426212a7c9337c0409f7c528d40d",
+    "gen\\ddr5_cmd_decoder_inj_flip_VrefCS_CA12.sv": "389dd16f315c2381804012540dfe858c246a8a2a07f1acd86a6f2e2545b3f9f1",
+    "gen\\ddr5_cmd_decoder_inj_misop_MPC_Enter_CA_as_ExitCS.sv": "46a8c04d99933986a236e03950fa838010fab44e3ba9e5d8860ac5730f22e208",
+    "gen\\ddr5_cmd_decoder_inj_misop_MPC_ZQCal_Start_as_Latch.sv": "021fc559145449c003f445590de559619a0edc3d268cf8f5bfb4c2da7eb5e6e2",
+    "kg\\commands.yaml": "6f6714198163ff62af6d31f848344224ff697f8a3b1815939ebe5aba1021a0dc",
+    "kg\\counters.yaml": "1e67cb920122f9691fbaa715f51bfca93c2bc80b3ec8f64603a926352286db6e",
+    "kg\\decode_rules.yaml": "c70d9879bffeccb475ceebe7dbed0e06a3b6bde2e64d04c0001050b49e174a56",
+    "kg\\dramconfigs.yaml": "15a842623350a3d02fa34888c7683b76810decd676b54fbac35b7e3a9be58b13",
+    "kg\\mode_registers.yaml": "44c16ce3e665c96ad4b57afa261fae8d81e9ab019d20ef620177d61f4566e045",
+    "kg\\procedures.yaml": "ecd9d43871dfb2e7e7dabba6d469482cc9efa34de12a9fa5a2cf7d5179fec6af",
+    "kg\\rules.yaml": "94d4d77d54871de04b08812d811b37326646ea5c2f561b36b65f48fb84d3ccec",
+    "kg\\signals.yaml": "dd3315b25252fe68142eddb267339ffb255c87c664c4c8584cf2c1b23cc30c9b",
+    "kg\\states.yaml": "71d8513ddbcf508bb3fef087fbf6eb3a06f7dc1c9a9a0aa412df5da1ea58d355",
+    "kg\\timing_parameters.yaml": "dd3d979cc0f9ef02fdd60e0a209b9580fcbc766bc09f936c36026abf5b7bd87b",
+    "pipeline\\audit_pipeline.py": "75d06c9128e47031aa4e69b46810428e8a5b39ba64f8b68146ab09445541545b",
+    "pipeline\\exp1_measure_pkg.py": "7c58b0f69cfbb23b382858162af60286206f9773473e075ad50cb4850a7a89fe",
+    "pipeline\\exp1_measure_recall.py": "3c8cc11c143a481f69d0908788a1bcd1f4917e49e418b36787b543f775b7787e",
+    "pipeline\\exp2_error_injection.py": "2adc54836c135e995213bed5b1b1250c08f651163c61c1dd1da496d09f81f4d8",
+    "pipeline\\exp3_measure_pgen.py": "3698f66e53e5ece929d5f71e4abef99b412a838fa4f8830dd484bdac3e76bdba",
+    "pipeline\\extract_commands.py": "85c307ed47bc1d5f0326d89d181ef98efa616a6839e04f8a67d3628b700a9315",
+    "pipeline\\gen_decoder.py": "7676d0aaf627e82a6363209adc2586496475a8f99a0ae13fb44246d44c808a77",
+    "pipeline\\gen_rules.py": "eca676cefbdf5462707ccd374b3387b7ed8b0edce5dca25af36f9374613410e0",
+    "pipeline\\run_pipeline.py": "c13d712196f08ee84f46162353b6f3798d1b055e35d81723c1205feeb26bff2c",
+    "pipeline\\schema_def.py": "4e8dda50e37eecb4599d696511245794c8880d35f03ee48f3441437419a972ed",
+    "pipeline\\__init__.py": "0d544f1c13db88d52e39e7203fee6c7631e9e4fad2db5053ce11a248095f1597",
+    "schema\\schema_commands.md": "e6795b1d745046c1c3aeaebfc0d5dd59402594214ac7667a7355c1e7287fb6d5",
+    "schema\\schema_counters.md": "2f3da9459fb55d1802e649f9ef31f25b246d6a04640ef12c5b8c80f331220f06",
+    "schema\\schema_decode_rules.md": "e9f65d7fe113b6d6b8e67358b71b76a4548a00e7ed6c7c876fe60802985348fb",
+    "schema\\schema_dramconfigs.md": "7a8a9579e6f26177dc1805d01589d8846b22ab8f684d9709a8e262d10cda8f99",
+    "schema\\schema_mode_registers.md": "388a5374cd48fe71ad35c4044f70f9d03606bb8f01a1378afe1dcdb2481c000b",
+    "schema\\schema_procedures.md": "db107b3356c1f8b62b09363f20d7ac6ca3f5d0ddeaa1327a1b62d075323dca05",
+    "schema\\schema_rules.md": "4bdc945af8e90e7eb30cce23ee6d9fdddd9f5b64df2650feaf858dac06bbab67",
+    "schema\\schema_signals.md": "fb2b7660d241a1ef6c68811c273110ffdd3517ca7244bb9ee18632f8ce8276a5",
+    "schema\\schema_states.md": "27ae0f4b97c12cd7f42c25a1de34499e0f7f80777f0f0c8ca81e9d7c6e043048",
+    "schema\\schema_timing_parameters.md": "0d29d2eee2be746eb21c5bc29d9cf05f4b6051c03c380acfdf9ea0c47fe19f91"
+  }
+}

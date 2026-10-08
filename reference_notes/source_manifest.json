@@ -1,0 +1,20 @@
+[
+  {
+    "path": "../JESD79-5D.PDF",
+    "sha256": "6a04ff25e3b0851a36716025ca0983acce0fc0ecc7c9bf7d5d6bc63f410bff27",
+    "physical_pages": 534,
+    "extracted_text": "reference_notes/extracted/JESD79-5D.txt"
+  },
+  {
+    "path": "../papers/ICCAD26_ChatFCM.pdf",
+    "sha256": "9e79d40f80131dd2c49458f93d95e742c3c37d279cd24c90c70fe8d21b1f7734",
+    "physical_pages": 9,
+    "extracted_text": "reference_notes/extracted/ICCAD26_ChatFCM.txt"
+  },
+  {
+    "path": "../FCM_CoverageClosure_v2.pptx",
+    "sha256": "d4e435a377b3fcdb1a1aaf0bf8036dc5d6a33d46fc2be4920601480fa1315b47",
+    "slides": 21,
+    "extracted_text": "reference_notes/extracted/FCM_CoverageClosure_v2.txt"
+  }
+]

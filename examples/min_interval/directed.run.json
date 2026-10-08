@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "fixture.directed",
+  "origin": "synthetic_fixture",
+  "time_unit": "ns",
+  "plan_sha256": "4be5b5f946b6468aa64ad600bb3fb74d80e90e7a40ddec1dedc39bc956f83def",
+  "events_sha256": "e001bf152331bb936f1f2c20ea5712ad1d0471947893caa9fc15cb87bc28e81a",
+  "versions": {
+    "dut": "fixture-only:no-dut",
+    "testbench": "fixture-only:no-testbench",
+    "monitor": "fixture-only:no-monitor",
+    "binding": "fixture-only:no-binding",
+    "config": "fixture-only:no-config",
+    "checker": "fixture-only:no-checker",
+    "simulator": "fixture-only:no-simulator",
+    "sampling": "fixture-only:no-sampling"
+  },
+  "stages": {
+    "build": "not_run",
+    "run": "not_run",
+    "export": "not_run"
+  }
+}

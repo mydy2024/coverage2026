@@ -1,0 +1,6 @@
+.tools/
+__pycache__/
+*.pyc
+reference_notes/extracted/
+reference_notes/figures/
+runs/

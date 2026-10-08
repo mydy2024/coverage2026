@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "plan_id": "offline.single_rule",
+  "revision": 1,
+  "protocol": "offline_baseline_not_ddr5",
+  "time_unit": "ns",
+  "sources": [
+    {
+      "id": "src.offline.single",
+      "path": "../spec.md",
+      "sha256": "ff3290bf63311295b9cfddff106f3c0d20ca1cdd2bde3c228f0ec7bfd1f667cb",
+      "locator": "Offline baseline spec, single-rule section"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "req.offline.single",
+      "source_ids": [
+        "src.offline.single"
+      ],
+      "text": "END follows latest START by at least 4 ns in the same scope and epoch.",
+      "review_status": "reviewed"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rel.offline.single",
+      "revision": 1,
+      "requirement_id": "req.offline.single",
+      "review_status": "reviewed",
+      "blockers": [],
+      "op": "min_interval",
+      "start_command": "START",
+      "end_commands": [
+        "END"
+      ],
+      "bound_ticks": 4,
+      "history_policy": "latest_start",
+      "start_anchor": "observed_start_timestamp",
+      "end_anchor": "observed_end_timestamp"
+    }
+  ]
+}

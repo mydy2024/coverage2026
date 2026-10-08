@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "plan_id": "fixture.min_interval",
+  "revision": 1,
+  "protocol": "synthetic_fixture_not_ddr5",
+  "time_unit": "ns",
+  "sources": [
+    {
+      "id": "src.fixture",
+      "path": "spec.md",
+      "sha256": "d355b3154c8806f9a019232156fd3cb45912f8d6777d1762c629cb73b6d66e8f",
+      "locator": "Synthetic min-interval fixture, paragraphs 2-3"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "req.fixture.interval",
+      "source_ids": [
+        "src.fixture"
+      ],
+      "text": "END follows latest START by at least 4 ns in the same scope and epoch.",
+      "review_status": "reviewed"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rel.fixture.interval",
+      "revision": 1,
+      "requirement_id": "req.fixture.interval",
+      "review_status": "reviewed",
+      "blockers": [],
+      "op": "min_interval",
+      "start_command": "START",
+      "end_commands": [
+        "END"
+      ],
+      "bound_ticks": 4,
+      "history_policy": "latest_start",
+      "start_anchor": "observed_START_timestamp",
+      "end_anchor": "observed_END_timestamp"
+    }
+  ]
+}

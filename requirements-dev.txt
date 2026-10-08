@@ -1,0 +1,2 @@
+# Optional SystemVerilog frontend check only; core CLI and unit tests use stdlib.
+pyslang==12.0.0
