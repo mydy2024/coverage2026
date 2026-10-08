@@ -6,6 +6,12 @@
 
 **当前执行路线：离线优先。** 用户暂时无法提供工程环境信息，近期按[无工程环境的离线路线](docs/07_无工程环境的离线路线.md)推进独立基准、采样语义、诊断与修复回归。真实DDR5接入单独待验收，不再作为离线开发前置条件。
 
+**当前交付优先级已调整为 DDR5 Vref SV 优先。** 已新增
+[DDR5 Vref coverage v1](delivery/ddr5_vref_v1/README.md)，采用暂定的事件级
+monitor接口，覆盖Table 125/127的VrefCA/VrefCS delay关系。package、interface、
+adapter模板和smoke test已通过pyslang静态检查；真实TB绑定和商业仿真尚待环境提供，
+因此该交付仍明确标为provisional，不改变`closure_claim=false`。
+
 ## 阅读入口
 
 | 文档 | 解决的问题 |
@@ -18,6 +24,7 @@
 | [06 首版实现与接入](docs/06_首版实现与接入.md) | 已实现能力、运行命令、复用monitor的事件契约、当前限制 |
 | [07 无工程环境的离线路线](docs/07_无工程环境的离线路线.md) | 当前优先工作、独立基准、离线诊断与工程验收边界 |
 | [08 离线基准O1交付与当前进展](docs/08_离线基准O1交付与当前进展.md) | O1 交付物、13 个场景验证结果、当前项目状态 |
+| [09 获得仿真环境后的接入执行手册](docs/09_获得仿真环境后的接入执行手册.md) | 环境到手后如何配置、绑定、仿真、导出证据并验收M0/M1 |
 | [材料核对笔记](reference_notes/材料核对.md) | PPT、ChatFCM、JEDEC 对方案的支持与需要修正之处 |
 
 ## 一条完整的链
@@ -64,4 +71,4 @@ python -m unittest discover -s tests -v
 
 `reference_notes/extracted/` 是本地阅读缓存；`reference_notes/figures/` 是页图；`.tools/python/` 包含PDF读取依赖与可选SV前端检查工具。需要重新抽取时运行 `python tools/extract_references.py`，依赖PyMuPDF 1.28.2；SV检查使用 `python tools/check_generated_sv.py`，依赖pyslang 12.0.0。
 
-当前下一步是建立独立离线基准与受控故障实验包。O1（独立离线基准，13 个场景）已交付并通过验证，见[08 离线基准O1交付与当前进展](docs/08_离线基准O1交付与当前进展.md)；下一项是 O3（证据驱动诊断）的最小案例。`configs/environment.json`可以保持未配置；其doctor结果仅表示真实环境尚未接入，不阻止离线工作。环境可用后再完成M0/M1真实事务证据链验收。
+O1（独立离线基准，13 个场景）已交付并通过验证，见[08 离线基准O1交付与当前进展](docs/08_离线基准O1交付与当前进展.md)。当前下一项是将Vref v1的暂定事件接口绑定到真实monitor，并在商业仿真器中运行边界smoke；环境未提供期间仍可继续O3最小诊断案例。`configs/environment.json`未配置时的doctor结果只表示真实环境尚未接入。

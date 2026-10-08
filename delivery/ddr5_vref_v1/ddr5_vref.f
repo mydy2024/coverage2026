@@ -1,0 +1,3 @@
+ddr5_vref_cov_pkg.sv
+ddr5_vref_cov_if.sv
+ddr5_vref_adapter_template.sv

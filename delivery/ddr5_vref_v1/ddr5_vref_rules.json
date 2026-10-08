@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "delivery_id": "ddr5.vref.v1",
+  "status": "provisional_interface_pending_real_tb_binding",
+  "time_unit": "fs",
+  "source": {
+    "document": "JESD79-5D",
+    "sha256": "6a04ff25e3b0851a36716025ca0983acce0fc0ecc7c9bf7d5d6bc63f410bff27",
+    "vrefca_locator": "physical page 270; printed page 234; Table 125 and Figure 117",
+    "vrefcs_locator": "physical page 271; printed page 235; Table 127 and Figure 118",
+    "tmrd_locator": "Table 20"
+  },
+  "bound": {
+    "expression": "max(14000000 fs, 16*tCK_fs)",
+    "snapshot": "at_start_event"
+  },
+  "scope_key": ["channel", "subchannel", "rank"],
+  "history_policy": "latest_start",
+  "start_commands": ["VrefCA", "VrefCS"],
+  "end_commands": [
+    "ACT",
+    "MPC_ZQCal_Start",
+    "PREab",
+    "PREpb",
+    "PREsb",
+    "MPC_Enter_CA_Training_Mode",
+    "MPC_Enter_CS_Training_Mode",
+    "MPC_Enter_PDA_Enumerate_Programming_Mode",
+    "MPC_PDA_Select_ID",
+    "MRR",
+    "MRW",
+    "PDE",
+    "REFab",
+    "REFsb",
+    "RFMab",
+    "RFMsb",
+    "SRE",
+    "VrefCA",
+    "VrefCS"
+  ],
+  "legal_bins_per_relation": ["at_bound", "above_bound"],
+  "legal_relation_count": 38,
+  "adapter_contract": {
+    "event_source": "decoded monitor observation, never driver intent",
+    "timestamp_anchor": "reviewed semantic command anchor; adapter consolidates multi-cycle raw edges",
+    "serialization": "strictly increasing timestamp per scope",
+    "invalid_observation": "clear Vref history for the affected scope",
+    "config_change": "increment config_epoch before emitting the first event under the new configuration"
+  }
+}

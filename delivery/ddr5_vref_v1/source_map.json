@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "delivery_id": "ddr5.vref.v1",
+  "generated_file": "ddr5_vref_cov_if.sv",
+  "native_paths": null,
+  "mappings": [
+    {
+      "relation_id": "rel.ddr5.vrefca.delay",
+      "requirement": "VrefCA to a Table 125 valid end command must satisfy tVrefCA_Delay=tMRD",
+      "source_locator": "JESD79-5D physical page 270; printed page 234; Table 125 and Figure 117",
+      "covergroup_symbol": "cg_vrefca_delay",
+      "instance_symbol": "vrefca_delay_cov",
+      "end_coverpoint": "cp_end_command",
+      "outcome_coverpoint": "cp_outcome",
+      "legal_outcomes": ["at_bound", "above_bound"],
+      "violation_counter": "vrefca_violation_count"
+    },
+    {
+      "relation_id": "rel.ddr5.vrefcs.delay",
+      "requirement": "VrefCS to a Table 127 valid end command must satisfy tVrefCS_Delay=tMRD",
+      "source_locator": "JESD79-5D physical page 271; printed page 235; Table 127 and Figure 118",
+      "covergroup_symbol": "cg_vrefcs_delay",
+      "instance_symbol": "vrefcs_delay_cov",
+      "end_coverpoint": "cp_end_command",
+      "outcome_coverpoint": "cp_outcome",
+      "legal_outcomes": ["at_bound", "above_bound"],
+      "violation_counter": "vrefcs_violation_count"
+    }
+  ],
+  "binding_status": "provisional_event_interface",
+  "hdl_validation": "pyslang_12.0.0_passed",
+  "simulation_validation": "not_run",
+  "closure_claim": false
+}
